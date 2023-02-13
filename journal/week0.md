@@ -1,4 +1,7 @@
 # Week 0 — Billing and Architecture
+## Intro
+Thanks for this opportunity! I completed all the homework on the checklist. I've explained each item below.
+
 ## Setting up a billing alarm and budget
 For the budget, I had an existing zero-spend budget I created previously but I liked the idea of creating the budget via CLI so I followed that through and now have a new budget named Budget_from_CLI. I then created an SNS topic and subscribed to it via CLI. I used a gmail address and the subscription confirmation email went into my spam folder, so you may want to check that if you don’t see the email show up pretty quick. I went on to create a CloudWatch billing alarm via the CLI. I also created an alarm via the GUI.
 
@@ -9,7 +12,11 @@ I created a new GitHub repository using the provided template. Using Andrew’s 
 I opened up CloudShell and decided to figure out how to create an S3 bucket to make use of the shell. I used “aws s3 help” to find out how to do this. The command is “aws s3 mb s3://your-bucket-name”
 
 ## Conceptual Architecture Diagrams
-#### My version of the high-level concept drawing:
+#### My actual napkin design
+
+![cruddur_napkin](https://user-images.githubusercontent.com/54210615/218597868-bf7837ff-50cb-47dd-80fe-8b9af53e4587.jpg)
+
+#### My Lucid version of the high-level concept drawing:
 [Conceptual Dragram Link](https://lucid.app/lucidchart/fe6f1a32-3b7e-477d-970c-7c29692050a3/edit?viewport_loc=-509%2C-448%2C2219%2C1052%2C0_0&invitationId=inv_dcb9d19e-812c-4a39-8ba7-250fa108104a)
 
 ![concept_dragram](https://user-images.githubusercontent.com/54210615/218357352-792bbd62-c685-41b8-a677-d63045383abb.PNG)
