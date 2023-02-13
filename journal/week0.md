@@ -36,3 +36,16 @@ TBD
 
 ### Open a support ticket and request a service limit
 TBD
+
+## Extra
+### Domain name work
+I expanded on the prereq to get a domain name. I wanted to put up an under construction page instead of having the registrar's parked page. So I followed these steps:
+- Created a Hosted Zone for the domain on AWS Route53
+- Updated my domain on NameCheap to use Route53 nameservers
+- Created an S3 bucket to host an “under construction page”
+- Named the bucket with my domain name
+- Turned off Block Public Access
+- Created a Policy to allow GetObject on the bucket from anyone
+- Turned on Static website hosting on the bucket
+- Placed my index.html file in the bucket
+- Created an A record in Route53 to point my domain name to the S3 bucket
