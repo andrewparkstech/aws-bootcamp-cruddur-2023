@@ -4,6 +4,13 @@ Thanks for this opportunity! I completed all the homework on the checklist. I've
 
 ## Setting up a billing alarm and budget
 For the budget, I had an existing zero-spend budget I created previously but I liked the idea of creating the budget via CLI so I followed that through and now have a new budget named Budget_from_CLI. I then created an SNS topic and subscribed to it via CLI. I used a gmail address and the subscription confirmation email went into my spam folder, so you may want to check that if you don’t see the email show up pretty quick. I went on to create a CloudWatch billing alarm via the CLI. I also created an alarm via the GUI.
+##### Budgets:
+<img src="https://user-images.githubusercontent.com/54210615/218617443-226289b0-9495-42ec-b665-5b93abc7a599.PNG" alt="Budgets" width="600">
+
+##### CloudWatch Alarms:
+<img src="https://user-images.githubusercontent.com/54210615/218617446-7992d0f5-07b1-44ed-a9ad-a199102c6ec8.PNG" alt="CloudWatch Alarms" width="600">
+
+
 
 ## Generating AWS Credentials
 I had an AWS user I set up previously with associated access credentials. I created a new GitHub repository using the provided template. Using Andrew’s video from the official playlist, I installed the extension on FireFox that adds the GitPod button to GitHub. Next, I installed the AWS CLI in the GitPod terminal. I created the environment variables on GitPod that store the user's programmatic access key ID and secret. I also edited the .gitpod.yml file with code that will auto-install the AWS CLI each time the GitPod environment is launched. I did get an error when trying to do my first commit from GitPod, saying I did not have permission to push to the GitHub repo. I googled this to get answers. What you need to do is go to your GitPod User Settings and then Integrations. Select the 3 dots icon by your GitHub account and click Edit Permissions then check off public_repo so that GitPod has access to push to your public repo for this project.
@@ -24,6 +31,8 @@ I opened up CloudShell and decided to figure out how to create an S3 bucket to m
 ## Homework Challenges
 ### Destroy your root account credentials, Set MFA, IAM role
 I used the root account only to enable billing alarms and setup my other user. I've enabled MFA on the root account and my second user account. I am using the second user account to do all the tasks.
+##### IAM:
+<img src="https://user-images.githubusercontent.com/54210615/218618372-b375e79d-742a-4e19-8d04-44404c7f6fab.PNG" alt="IAM" width="400">
 
 ### Use EventBridge to hookup Health Dashboard to SNS and send notification when there is a service health issue
 This was the most interesting homework item for me personally. I had no idea how to do it but it sounded interesting and useful.
