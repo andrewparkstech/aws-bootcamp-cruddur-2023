@@ -47,6 +47,7 @@ I reviewed the AWS Well-Architected Framework Pillars. I opened the AWS Well-Arc
 <img src="https://user-images.githubusercontent.com/54210615/218602178-18b1f1fb-75c6-4c41-aed6-91157f803930.PNG" alt="Well-Architected" width="600">
 
 ### Create an architectural diagram (to the best of your ability) the CI/CD logical pipeline in Lucid Charts
+I did create the more-detailed Lucid diagram showing the AWS services. I was able to fix the Momento SVG icon by removing the extra tag parameters. I didn't need to add the XML tag at all.
 #### My version of the Logical diagram:
 [Logical Diagram Link](https://lucid.app/lucidchart/fe6f1a32-3b7e-477d-970c-7c29692050a3/edit?viewport_loc=-155%2C-247%2C2219%2C1052%2C99HwTMa.uPDE&invitationId=inv_dcb9d19e-812c-4a39-8ba7-250fa108104a)
 
