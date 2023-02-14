@@ -23,7 +23,7 @@ I opened up CloudShell and decided to figure out how to create an S3 bucket to m
 
 ## Homework Stretch Assignments
 ### Destroy your root account credentials, Set MFA, IAM role
-I used the root account only to enable billing alarms and setup my other user. I've enabled MFA as well
+I used the root account only to enable billing alarms and setup my other user. I've enabled MFA on the root account and my second user account. I am using the second user account to do all the tasks.
 
 ### Use EventBridge to hookup Health Dashboard to SNS and send notification when there is a service health issue
 This was the most interesting homework item for me personally. I had no idea how to do it but it sounded interesting and useful. I created an EventBridge rule that matches events from AWS Health for the EC2 service, with the target being a new SNS topic I created. I then subscribed to the SNS topic with my email.
