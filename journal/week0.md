@@ -30,7 +30,8 @@ I used the root account only to enable billing alarms and setup my other user. I
 TBD
 
 ### Review all the questions of each pillars in the Well Architected Tool (No specialized lens)
-TBD
+I reviewed the AWS Well-Architected Framework Pillars. I opened the AWS Well-Architected Tool and reviewed the questions that it asks.
+![AWS_WAF](https://user-images.githubusercontent.com/54210615/218602178-18b1f1fb-75c6-4c41-aed6-91157f803930.PNG)
 
 ### Create an architectural diagram (to the best of your ability) the CI/CD logical pipeline in Lucid Charts
 #### My version of the Logical diagram:
@@ -39,10 +40,20 @@ TBD
 ![logical_diagram](https://user-images.githubusercontent.com/54210615/218357565-17ed6e03-e7d6-4331-a49b-92af7f9ee9f4.PNG)
 
 ### Research the technical and service limits of specific services and how they could impact the technical path for technical flexibility. 
-TBD
+I reviewed the Service Quotas section in AWS to see the limits for each service. An exmaple is AWS RDS database service. Here is a screenshot showing some of the limits. Note that some quotas cannot be adjusted:
+![RDS_Quotas](https://user-images.githubusercontent.com/54210615/218603148-4996be88-35cd-495b-9e2e-c88c137ca040.PNG)
+
 
 ### Open a support ticket and request a service limit
-TBD
+The way to request a specific limit be increased:
+- go to the AWS Service Quotas within the console
+- click on AWS Services
+- search for a specific service such as DynamoDB
+- choose the specific quota that you need to increase
+- Click Request quota increase
+- Fill in your required quota alue, click Request
+![quota_increase](https://user-images.githubusercontent.com/54210615/218604413-41908375-a508-4fee-9bef-866b0cca788d.PNG)
+
 
 ## Extra
 ### Domain name work
