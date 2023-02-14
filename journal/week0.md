@@ -71,3 +71,4 @@ I expanded on the prereq to get a domain name. I wanted to put up an under const
 - Turned on Static website hosting on the bucket
 - Placed my index.html file in the bucket
 - Created an A record in Route53 to point my domain name to the S3 bucket
+- http://cloudproject.cyou/
