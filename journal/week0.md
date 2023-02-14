@@ -27,6 +27,7 @@ I used the root account only to enable billing alarms and setup my other user. I
 
 ### Use EventBridge to hookup Health Dashboard to SNS and send notification when there is a service health issue
 This was the most interesting homework item for me personally. I had no idea how to do it but it sounded interesting and useful. I created an EventBridge rule that matches events from AWS Health for the EC2 service, with the target being a new SNS topic I created. I then subscribed to the SNS topic with my email.
+
 <img src="https://user-images.githubusercontent.com/54210615/218614051-1752374f-7b6d-4e09-be1b-5660d0ee9e0b.PNG" alt="EventBridge" width="600">
 
 
