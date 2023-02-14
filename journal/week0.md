@@ -26,7 +26,9 @@ I opened up CloudShell and decided to figure out how to create an S3 bucket to m
 I used the root account only to enable billing alarms and setup my other user. I've enabled MFA as well
 
 ### Use EventBridge to hookup Health Dashboard to SNS and send notification when there is a service health issue
-TBD
+This was the most interesting homework item for me personally. I had no idea how to do it but it sounded interesting and useful. I created an EventBridge rule that matches events from AWS Health for the EC2 service, with the target being a new SNS topic I created. I then subscribed to the SNS topic with my email.
+<img src="https://user-images.githubusercontent.com/54210615/218614051-1752374f-7b6d-4e09-be1b-5660d0ee9e0b.PNG" alt="EventBridge" width="600">
+
 
 ### Review all the questions of each pillars in the Well Architected Tool (No specialized lens)
 I reviewed the AWS Well-Architected Framework Pillars. I opened the AWS Well-Architected Tool and reviewed the questions that it asks.
