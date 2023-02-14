@@ -14,13 +14,12 @@ I opened up CloudShell and decided to figure out how to create an S3 bucket to m
 ## Conceptual Architecture Diagrams
 #### My actual napkin design
 
-![cruddur_napkin](https://user-images.githubusercontent.com/54210615/218597868-bf7837ff-50cb-47dd-80fe-8b9af53e4587.jpg)
+<img src="https://user-images.githubusercontent.com/54210615/218597868-bf7837ff-50cb-47dd-80fe-8b9af53e4587.jpg" alt="cruddur napkin" width="600">
 
 #### My Lucid version of the high-level concept drawing:
 [Conceptual Dragram Link](https://lucid.app/lucidchart/fe6f1a32-3b7e-477d-970c-7c29692050a3/edit?viewport_loc=-509%2C-448%2C2219%2C1052%2C0_0&invitationId=inv_dcb9d19e-812c-4a39-8ba7-250fa108104a)
 
-![concept_dragram](https://user-images.githubusercontent.com/54210615/218357352-792bbd62-c685-41b8-a677-d63045383abb.PNG)
-
+<img src="https://user-images.githubusercontent.com/54210615/218357352-792bbd62-c685-41b8-a677-d63045383abb.PNG" alt="concept diagram" width="600">
 
 ## Homework Stretch Assignments
 ### Destroy your root account credentials, Set MFA, IAM role
@@ -31,17 +30,17 @@ TBD
 
 ### Review all the questions of each pillars in the Well Architected Tool (No specialized lens)
 I reviewed the AWS Well-Architected Framework Pillars. I opened the AWS Well-Architected Tool and reviewed the questions that it asks.
-![AWS_WAF](https://user-images.githubusercontent.com/54210615/218602178-18b1f1fb-75c6-4c41-aed6-91157f803930.PNG)
+<img src="https://user-images.githubusercontent.com/54210615/218602178-18b1f1fb-75c6-4c41-aed6-91157f803930.PNG" alt="Well-Architected" width="600">
 
 ### Create an architectural diagram (to the best of your ability) the CI/CD logical pipeline in Lucid Charts
 #### My version of the Logical diagram:
 [Logical Diagram Link](https://lucid.app/lucidchart/fe6f1a32-3b7e-477d-970c-7c29692050a3/edit?viewport_loc=-155%2C-247%2C2219%2C1052%2C99HwTMa.uPDE&invitationId=inv_dcb9d19e-812c-4a39-8ba7-250fa108104a)
 
-![logical_diagram](https://user-images.githubusercontent.com/54210615/218357565-17ed6e03-e7d6-4331-a49b-92af7f9ee9f4.PNG)
+<img src="https://user-images.githubusercontent.com/54210615/218357565-17ed6e03-e7d6-4331-a49b-92af7f9ee9f4.PNG" alt="Logical Diagram" width="600">
 
 ### Research the technical and service limits of specific services and how they could impact the technical path for technical flexibility. 
 I reviewed the Service Quotas section in AWS to see the limits for each service. An exmaple is AWS RDS database service. Here is a screenshot showing some of the limits. Note that some quotas cannot be adjusted:
-![RDS_Quotas](https://user-images.githubusercontent.com/54210615/218603148-4996be88-35cd-495b-9e2e-c88c137ca040.PNG)
+<img src="https://user-images.githubusercontent.com/54210615/218603148-4996be88-35cd-495b-9e2e-c88c137ca040.PNG" alt="RDS Quotas" width="600">
 
 
 ### Open a support ticket and request a service limit
@@ -52,7 +51,7 @@ The way to request a specific limit be increased:
 - choose the specific quota that you need to increase
 - Click Request quota increase
 - Fill in your required quota alue, click Request
-![quota_increase](https://user-images.githubusercontent.com/54210615/218604413-41908375-a508-4fee-9bef-866b0cca788d.PNG)
+<img src="https://user-images.githubusercontent.com/54210615/218604413-41908375-a508-4fee-9bef-866b0cca788d.PNG" alt="Quota Increase" width="600">
 
 
 ## Extra
