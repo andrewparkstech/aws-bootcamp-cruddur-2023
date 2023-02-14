@@ -16,12 +16,12 @@ I opened up CloudShell and decided to figure out how to create an S3 bucket to m
 
 <img src="https://user-images.githubusercontent.com/54210615/218597868-bf7837ff-50cb-47dd-80fe-8b9af53e4587.jpg" alt="cruddur napkin" width="600">
 
-#### My Lucid version of the high-level concept drawing:
+#### My Lucid version of the high-level concept drawing: (my more detailed logical design that shows the AWS icons is below under Homework Challenges)
 [Conceptual Dragram Link](https://lucid.app/lucidchart/fe6f1a32-3b7e-477d-970c-7c29692050a3/edit?viewport_loc=-509%2C-448%2C2219%2C1052%2C0_0&invitationId=inv_dcb9d19e-812c-4a39-8ba7-250fa108104a)
 
 <img src="https://user-images.githubusercontent.com/54210615/218357352-792bbd62-c685-41b8-a677-d63045383abb.PNG" alt="concept diagram" width="600">
 
-## Homework Stretch Assignments
+## Homework Challenges
 ### Destroy your root account credentials, Set MFA, IAM role
 I used the root account only to enable billing alarms and setup my other user. I've enabled MFA on the root account and my second user account. I am using the second user account to do all the tasks.
 
