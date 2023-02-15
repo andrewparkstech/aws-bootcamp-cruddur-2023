@@ -5,11 +5,10 @@ Thanks for this opportunity! I completed all the homework on the checklist. I've
 ## Setting up a billing alarm and budget
 For the budget, I had an existing zero-spend budget I created previously but I liked the idea of creating the budget via CLI so I followed that through and now have a new budget named Budget_from_CLI. I then created an SNS topic and subscribed to it via CLI. I used a gmail address and the subscription confirmation email went into my spam folder, so you may want to check that if you don’t see the email show up pretty quick. I went on to create a CloudWatch billing alarm via the CLI. I also created an alarm via the GUI.
 ##### Budgets:
-<img src="https://user-images.githubusercontent.com/54210615/218617443-226289b0-9495-42ec-b665-5b93abc7a599.PNG" alt="Budgets" width="600">
+![AWS Budgets](assets/week0_AWS_Budgets.png)
 
 ##### CloudWatch Alarms:
-<img src="https://user-images.githubusercontent.com/54210615/218617446-7992d0f5-07b1-44ed-a9ad-a199102c6ec8.PNG" alt="CloudWatch Alarms" width="600">
-
+![AWS Alarms](assets/week0_AWS_CloudWatch_Alarms.png)
 
 
 ## Generating AWS Credentials
@@ -28,20 +27,20 @@ I opened up CloudShell and decided to figure out how to create an S3 bucket to m
 
 [Conceptual Dragram Link](https://lucid.app/lucidchart/fe6f1a32-3b7e-477d-970c-7c29692050a3/edit?viewport_loc=-509%2C-448%2C2219%2C1052%2C0_0&invitationId=inv_dcb9d19e-812c-4a39-8ba7-250fa108104a)
 
-<img src="https://user-images.githubusercontent.com/54210615/218357352-792bbd62-c685-41b8-a677-d63045383abb.PNG" alt="concept diagram" width="600">
+![Lucid Concept Diagramn](assets/week0_lucid_concept_diagram.png)
 
 ## Homework Challenges
 ### Destroy your root account credentials, Set MFA, IAM role
 I used the root account only to enable billing alarms and setup my other user. I've enabled MFA on the root account and my second user account. I am using the second user account to do all the tasks.
 ##### IAM:
-<img src="https://user-images.githubusercontent.com/54210615/218618372-b375e79d-742a-4e19-8d04-44404c7f6fab.PNG" alt="IAM" width="400">
+![IAM](assets/week0_AWS_IAM.png)
 
 ### Use EventBridge to hookup Health Dashboard to SNS and send notification when there is a service health issue
 This was the most interesting homework item for me personally. I had no idea how to do it but it sounded interesting and useful.
 I knew what SNS was and had already setup a topic for the billing alarm, but I had not used event bridge or health dashboard before. I went over to Event Bridge and noticed the different options for getting started like Rule or Pipe. I then went over to Health Dashboard to check it out. The first thing I saw was "No recent issues" and then a box at the top-right caught my eye that said "Amazon EventBridge rule". If you click configure from here, it jumps right into EventBridge and the Define rule detail page.
 I created an EventBridge rule that matches events from AWS Health for the EC2 service, with the target being a new SNS topic I created. I then subscribed to the SNS topic with my email.
 
-<img src="https://user-images.githubusercontent.com/54210615/218614051-1752374f-7b6d-4e09-be1b-5660d0ee9e0b.PNG" alt="EventBridge" width="600">
+![AWS EventBridge](assets/week0_AWS_EventBridge.png)
 
 
 ### Review all the questions of each pillars in the Well Architected Tool (No specialized lens)
@@ -53,7 +52,7 @@ I did create the more-detailed Lucid diagram showing the AWS services. I was abl
 #### My version of the Logical diagram:
 [Logical Diagram Link](https://lucid.app/lucidchart/fe6f1a32-3b7e-477d-970c-7c29692050a3/edit?viewport_loc=-155%2C-247%2C2219%2C1052%2C99HwTMa.uPDE&invitationId=inv_dcb9d19e-812c-4a39-8ba7-250fa108104a)
 
-<img src="https://user-images.githubusercontent.com/54210615/218357565-17ed6e03-e7d6-4331-a49b-92af7f9ee9f4.PNG" alt="Logical Diagram" width="600">
+![Lucid Logical Diagram](assets/week0_lucid_logical_diagram.png)
 
 ### Research the technical and service limits of specific services and how they could impact the technical path for technical flexibility. 
 I reviewed the Service Quotas section in AWS to see the limits for each service. An exmaple is AWS RDS database service. Here is a screenshot showing some of the limits. Note that some quotas cannot be adjusted:
