@@ -149,6 +149,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/Message'
 
+# added in Week 1
   /api/activities/notifications:
     get:
       description: 'Return a feed of activity for my followers'
@@ -164,6 +165,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Activity'
+# end added in Week 1
 
 components:
   schemas:

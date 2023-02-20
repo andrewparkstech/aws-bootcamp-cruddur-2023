@@ -4,6 +4,9 @@ from flask_cors import CORS, cross_origin
 import os
 
 from services.home_activities import *
+# added in Week 1
+from services.notifications_activities import *
+# end addded in Week 1
 from services.user_activities import *
 from services.create_activity import *
 from services.create_reply import *
@@ -64,6 +67,13 @@ def data_create_message():
 def data_home():
   data = HomeActivities.run()
   return data, 200
+
+# Added in Week 1
+@app.route("/api/activities/notifications", methods=['GET'])
+def data_notifications():
+  data = NotificationsActivities.run()
+  return data, 200  
+# End addded in Week 1
 
 @app.route("/api/activities/@<string:handle>", methods=['GET'])
 def data_handle(handle):
