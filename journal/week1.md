@@ -8,4 +8,4 @@ I had an issue with the AWS CLI not being installed for each GitPod session, eve
 ### Run dockerfile CMD as external script
 I was not 100% clear on what was intended on this one, but I decided to create a shell script that allows you to pass "up" or "down" to and it then runs the corresponding docker compose command
 ##### Image:
-![](assets/dockerapp.png)
+![](assets/week1_dockerapp.png)
