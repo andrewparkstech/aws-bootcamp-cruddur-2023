@@ -9,3 +9,8 @@ I had an issue with the AWS CLI not being installed for each GitPod session, eve
 I was not 100% clear on what was intended on this one, but I decided to create a shell script that allows you to pass "up" or "down" to and it then runs the corresponding docker compose command
 ##### Image:
 ![](assets/week1_dockerapp.png)
+
+
+### Push and tag an image to Docker Hub
+I liked this idea so I referred to the instructions at [This page](https://docs.docker.com/docker-hub/repos/) of the docker docs to see how to create a repository and push an image to it. I decided to build and tag the cruddur backend image (backend_flask) and push that to my public docker hub repo. [Link to my Docker Hub Repo](https://hub.docker.com/repository/docker/diggyblock/diggyblock_pub/general)
+I ran into one issue when trying to push to docker hub and that was not having permission. I had to search just a minute before finding the "docker login" command which I used on the command line in GitPod to provide my credentials. The push then worked fine.
