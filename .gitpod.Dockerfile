@@ -1,3 +1,5 @@
+# this is only used if .gitpod.yml points to it
+
 FROM gitpod/workspace-full:latest
 
 RUN cd /workspace \
