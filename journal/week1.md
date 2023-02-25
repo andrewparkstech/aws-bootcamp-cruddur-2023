@@ -16,3 +16,8 @@ I liked this idea so I referred to the instructions at [This page](https://docs.
 I ran into one issue when trying to push to docker hub and that was not having permission. I had to search just a minute before finding the "docker login" command which I used on the command line in GitPod to provide my credentials. The push then worked fine.
 ##### Docker Hub:
 ![Docker Hub](assets/week1_dockerhub.png)
+
+### Launch an EC2 instance that has docker installed...
+... and pull a container to demonstrate you can run your own docker processes
+For this one, I went into the AWS console, EC2 service, and searched for an AMI that had docker. I found an AMI by docker that had Debian and Docker. I launched an EC2 instance using this AMI. I also created a key pair to use with this instance and downloaded it as a putty ppk. Upon first trying to login using putty, I got an error. I checked the Usage instructions on the AMI, and it noted we must use the "admin" username rather than standard "ec2-user". This worked. I then pulled down the docker hello-world image and ran it:
+![Docker Hub](assets/week1_ec2_docker.png)
