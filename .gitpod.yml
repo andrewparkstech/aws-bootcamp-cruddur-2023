@@ -1,5 +1,7 @@
+# decided not to use this custom dockerfile since it took a long time to spin up the CDE
 # image:
 #  file: .gitpod.Dockerfile
+
 
 tasks:
   - name: aws-cli
@@ -22,6 +24,7 @@ vscode:
   extensions:
     - 42Crunch.vscode-openapi
 
+# Added in Week 2
 ports:
   - name: frontend
     port: 3000
