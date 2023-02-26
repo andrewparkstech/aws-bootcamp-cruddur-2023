@@ -10,6 +10,6 @@ Last week I had started using a custom gitpod workspace, but it was just taking 
 ## Homework
 So far I have the code from the Week2 video completed. Next in line is:
 - Video: observability vs monitoring
-- Video: CloudWatch
 - Video: Xray
+- Video: CloudWatch
 - Homework: other homework that may show once Week2 portal opens
