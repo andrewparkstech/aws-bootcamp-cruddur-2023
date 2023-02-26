@@ -15,4 +15,6 @@ So far I have the code from the Week2 main video completed. Next in line is:
 
 ### AWS X-Ray
 After adding the X-Ray code, my backend was not starting up. I went to the Docker extension in GitPod, and checked the logs for the backend container. It was showing an error: `NameError: name 'app' is not defined`. I went back to app.py to check, and noticed I had the X-Ray code before the definition `app = Flask(__name__)`. I moved the X-Ray code to be after this and the container starts up.
+
+The app is successfully sending data to AWS X-Ray:
 ![AWS_X-Ray](assets/week2_xray.png)
