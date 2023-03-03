@@ -10,6 +10,9 @@ Last week I had started using a custom gitpod workspace, but it was just taking 
 ## Homework
 I've completed the coding from the main video, the Xray video and CloudWatch video. I committed those changes then made another commit to comment them out to avoid too much spend. I'll be updating this journal as I move along with other tasks.
 
+### Honeycomb
+![Honeycomb](assets/week2_honeycomb.png)
+
 ### AWS X-Ray
 After adding the X-Ray code, my backend was not starting up. I went to the Docker extension in GitPod, and checked the logs for the backend container. It was showing an error: `NameError: name 'app' is not defined`. I went back to app.py to check, and noticed I had the X-Ray code before the definition `app = Flask(__name__)`. I moved the X-Ray code to be after this and the container starts up.
 
