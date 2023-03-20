@@ -19,7 +19,8 @@
 				"ms-python.python"
 			]
 		}
-	}
+	},
+	"postCreateCommand": "cd frontend-react-js && npm i && cd -"
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
