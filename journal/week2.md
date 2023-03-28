@@ -1,7 +1,7 @@
 # Week 2 — Distributed Tracing
 
 ## Intro
-Wow! The bootcamp is going full steam ahead and not looking back! That's a good thing as it's forcing me to think and learn. On Week 0, I thought oh this will be easy, I probably won't learn anything. HA! Not so, and again that is a good thing.
+Wow! The bootcamp is going full steam ahead and not looking back! That's a good thing as it's forcing me to think and learn. On Week 0, I thought oh this will be easy, I probably won't learn anything. HA! Not so, and again that is a good thing. Starting with Week 2, I fell behind on the week activities due to work and life but I am working on catching up.
 
 ## Issues
 ### Gitpod
