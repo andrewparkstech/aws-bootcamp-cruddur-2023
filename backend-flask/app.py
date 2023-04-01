@@ -3,6 +3,9 @@ from flask import request
 from flask_cors import CORS, cross_origin
 import os
 
+# from flask_awscognito import AWSCognitoAuthentication
+from lib.cognito_jwt_token import CognitoJwtToken, TokenVerifyError
+
 from services.home_activities import *
 from services.notifications_activities import *
 from services.user_activities import *
@@ -64,6 +67,13 @@ trace.set_tracer_provider(provider)
 tracer = trace.get_tracer(__name__)
 
 app = Flask(__name__)
+
+# aws_auth = AWSCognitoAuthentication(app)
+cognito_jwt_token = CognitoJwtToken (
+  user_pool_id        = os.getenv('AWS_COGNITO_USER_POOL_ID'),
+  user_pool_client_id = os.getenv('AWS_COGNITO_USER_POOL_CLIENT_ID'),
+  region              = os.getenv('AWS_DEFAULT_REGION')
+)
 
 # Xray
 xray_url = os.getenv("AWS_XRAY_URL")
@@ -154,11 +164,34 @@ def data_create_message():
   return
 
 @app.route("/api/activities/home", methods=['GET'])
+# @aws_auth.authentication_required
 def data_home():
-  app.logger.debug("AUTH HEADER")
-  app.logger.debug(request.headers['AUTHORIZATION'])
-  
-  data = HomeActivities.run() # data = HomeActivities.run(Logger=LOGGER)
+
+  access_token = CognitoJwtToken.extract_access_token(request_headers=request.headers)
+  try:
+    claims = cognito_jwt_token.verify(access_token)
+    # authenticated request
+    app.logger.debug('** Authenticated at ' + datetime.now().strftime("%H:%M:%S"))
+    data = HomeActivities.run(cognito_user_id=claims['username'])
+
+    # app.logger.debug(claims)
+    # self.token_service.verify(access_token)
+    # self.claims = self.token_service.claims
+    # g.cognito_claims = self.claims
+  except TokenVerifyError as e:
+    # unauthenticated request
+    app.logger.debug('unauthenticated')
+    data = HomeActivities.run()
+
+    #_ = request.data
+    # abort(make_response(jsonify(message=str(e)), 401))
+
+  # app.logger.debug("AUTH HEADER")
+  # app.logger.debug(request.headers['AUTHORIZATION'])
+  # data = HomeActivities.run(Logger=LOGGER)
+
+  # claims = aws_auth.claims
+
   return data, 200
 
 @app.route("/api/activities/notifications", methods=['GET'])
