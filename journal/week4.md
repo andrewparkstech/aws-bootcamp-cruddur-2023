@@ -1,8 +1,9 @@
 # Week 4 — Postgres and RDS
 
 ## Intro
-Week 4 In Progress.
-I'm behind but I am working to catch up.
+Week 4 In Progress. I'm behind on the bootcamp but I am working to catch up.
+
+## Progress
 - Watched main video and implemented corresponding code
 - Watched Ashish's Week 4 security video and took the quiz
 - Got the first query working
