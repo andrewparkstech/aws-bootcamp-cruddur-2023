@@ -14,10 +14,10 @@ class HomeActivities:
     # Logger.info('Hello Cloudwatch! from /api/activities/home')
 
     # Honeycomb
-    with tracer.start_as_current_span("home-activities-mock-data"):
-      span = trace.get_current_span()
-      now = datetime.now(timezone.utc).astimezone()
-      span.set_attribute("app.now", now.isoformat())
+    # with tracer.start_as_current_span("home-activities-mock-data"):
+    #   span = trace.get_current_span()
+    #   now = datetime.now(timezone.utc).astimezone()
+    #   span.set_attribute("app.now", now.isoformat())
       
       sql = query_wrap_array("""
       SELECT
@@ -41,7 +41,7 @@ class HomeActivities:
           cur.execute(sql)
           # this will return a tuple
           # the first field being the data
-          json = cur.fetchall()
+          json = cur.fetchone()
       return json[0]
 
       # results = [{
@@ -98,4 +98,4 @@ class HomeActivities:
 
       #span.set_attribute("app.result_length", len(results))
 
-      #return results
+      # return results
