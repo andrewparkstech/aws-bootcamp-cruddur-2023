@@ -217,6 +217,12 @@ def data_create_message():
     app.logger.debug("******** unauthenticated *************")
     return {}, 401
 
+@app.route("/api/users/@<string:handle>/short", methods=['GET'])
+def data_users_short(handle):
+  data = UsersShort.run(handle)
+  return data, 200
+
+
 @app.route("/api/activities/home", methods=['GET'])
 # @aws_auth.authentication_required
 def data_home():
@@ -252,7 +258,6 @@ def data_home():
 def data_notifications():
   data = NotificationsActivities.run()
   return data, 200  
-
 
 @app.route("/api/activities/@<string:handle>", methods=['GET'])
 # xray
@@ -304,10 +309,6 @@ def data_activities_reply(activity_uuid):
     return model['data'], 200
   return
 
-@app.route("/api/users/@<string:handle>/short", methods=['GET'])
-def data_users_short(handle):
-  data = UsersShort.run(handle)
-  return data, 200
 
 
 if __name__ == "__main__":
