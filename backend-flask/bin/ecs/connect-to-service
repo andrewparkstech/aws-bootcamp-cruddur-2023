@@ -1,0 +1,21 @@
+#! /usr/bin/bash
+
+if [ -z "$1" ]; then
+  echo "No Task ID specified"
+  exit 1
+fi
+TASK_ID=$1
+
+if [ -z "$2" ]; then
+  echo "No container specified"
+  exit 1
+fi
+CONTAINER=$2
+
+aws ecs execute-command  \
+--region $AWS_DEFAULT_REGION \
+--cluster cruddur \
+--task $TASK_ID \
+--container $CONTAINER \
+--command "/bin/bash" \
+--interactive
