@@ -1,2 +1,3 @@
 docker/dynamodb/*
 aws/script_output.json
+frontend-react-js/build/*
