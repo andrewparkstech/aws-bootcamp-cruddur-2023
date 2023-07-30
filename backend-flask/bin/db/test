@@ -4,14 +4,14 @@ import psycopg
 import os
 import sys
 
-connection_url = os.getenv("CONNECTION_URL")
+connection_url = os.getenv("PROD_CONNECTION_URL")
 
 conn = None
 try:
-  print('attempting connection')
+  print('DB test script attempting connection...')
   conn = psycopg.connect(connection_url)
   print("Connection successful!")
+  conn.close()
 except psycopg.Error as e:
   print("Unable to connect to the database:", e)
-finally:
-  conn.close()
+  sys.exit(1)
