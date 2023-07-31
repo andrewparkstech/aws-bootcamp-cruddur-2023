@@ -6,11 +6,7 @@ if [ -z "$1" ]; then
 fi
 TASK_ID=$1
 
-if [ -z "$2" ]; then
-  echo "No container specified"
-  exit 1
-fi
-CONTAINER=$2
+CONTAINER="backend-flask"
 
 aws ecs execute-command  \
 --region $AWS_DEFAULT_REGION \
