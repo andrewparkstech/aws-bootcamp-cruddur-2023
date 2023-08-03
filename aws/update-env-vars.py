@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 ###############################################################################
-# Created by diggyblock 7/29/23
+# Created by Andrew Parks 7/29/23
 # chmod the file to make it executable.
 # This script takes a json file as an argument, replaced environment varable
 #   references with actual values and outputs the result to a file.
